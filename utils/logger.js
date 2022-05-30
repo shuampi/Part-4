@@ -1,3 +1,5 @@
+//module for printing to the console.
+
 const info = (...params) => {
     console.log(...params)
 }
