@@ -21,4 +21,4 @@ router.post('/', (request, response) => {
       })
   })
 
-  modules.export = router
+  module.exports = router
