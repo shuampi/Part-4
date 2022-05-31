@@ -4,11 +4,13 @@ const dummy = (blogs) => {
  }
 
  const totalLikes = (arrayBlogs) => { 
-     if(arrayBlogs.length!==0){
-    const likesArray = arrayBlogs.map((blogList) => { blogList.likes })
-    const sum = likesArray.reduce((previus, current) => { previus + current })}
+    if(arrayBlogs.length===0){
+        return 0
+    }else if(arrayBlogs.length===1){
+        return arrayBlogs[0].likes
+    }else{
 
-    return arrayBlogs.length===0? 0: sum
+    }
 
   }
 

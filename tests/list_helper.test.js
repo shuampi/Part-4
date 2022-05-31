@@ -63,4 +63,18 @@ test('return one', () => {
         const result = listHelper.totalLikes([])
         expect(result).toBe(0)
       })
+
+      test('when there is only one blog in the list return the likes of that blog',() => { 
+        const blogs = [ {
+            _id: "5a422b891b54a676234d17fa",
+            title: "First class tests",
+            author: "Robert C. Martin",
+            url: "http://blog.cleancoder.com/uncle-bob/2017/05/05/TestDefinitions.htmll",
+            likes: 10,
+            __v: 0
+          }]
+          const result = listHelper.totalLikes(blogs)
+          expect(result).toBe(10)
+
+       })
   })
