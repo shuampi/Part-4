@@ -54,7 +54,7 @@ test('return one', () => {
     const blogs = []
     const result = listHelper.dummy(blogs)
     expect(result).toBe(1)
- })
+ });
 
  describe('total likes', () => { 
      
@@ -82,4 +82,12 @@ test('return one', () => {
           expect(result).toBe(36)
 
         })
+  });
+
+  describe('most liked blog', () => {
+test('when the blog list is empty return zero', () => { 
+    const blogs=[]
+    const result = listHelper.favouriteBlog(blogs)
+    expect(result).toBe(0)
+ })
   })
