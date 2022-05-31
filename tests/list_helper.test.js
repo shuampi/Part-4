@@ -1,5 +1,5 @@
 const listHelper = require('../utils/list_helper')
-const blogs = [
+const blogsList = [
     {
       _id: "5a422a851b54a676234d17f7",
       title: "React patterns",
@@ -75,6 +75,11 @@ test('return one', () => {
           }]
           const result = listHelper.totalLikes(blogs)
           expect(result).toBe(10)
-
        })
+
+       test('a list of blogs likes is equal to the summ of all likes', () => { 
+          const result = listHelper.totalLikes(blogsList)
+          expect(result).toBe(36)
+
+        })
   })

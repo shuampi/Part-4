@@ -9,7 +9,10 @@ const dummy = (blogs) => {
     }else if(arrayBlogs.length===1){
         return arrayBlogs[0].likes
     }else{
-
+const arrayLikes = arrayBlogs.map((blog) => { return blog.likes })
+console.log('arrayLikes', arrayLikes)
+const summOfLikes = arrayLikes.reduce((a,b) => a + b)
+return summOfLikes
     }
 
   }
