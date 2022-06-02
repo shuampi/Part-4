@@ -131,7 +131,20 @@ describe('author with the most posted blogs', () => {
    })
 
    test('when in the array there is only one blog return information of that blog', () => { 
-
+    const blogs = [{
+      _id: "5a422a851b54a676234d17f7",
+      title: "React patterns",
+      author: "Michael Chan",
+      url: "https://reactpatterns.com/",
+      likes: 7,
+      __v: 0,
+    }]
+    const current = {
+      author:"Michael Chan",
+      blogs: 1
+    }
+    const result = listHelper.mostBlogs(blogs)
+    expect(result).toEqual(current)
     })
 
     test('when the list of blogs is greater than one, return the author with most posted blogs',() => { 
