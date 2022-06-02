@@ -53,8 +53,28 @@ if(blogs.length===1){
   blogs: 1
 }
 return authorMostBlogsInfo
+} else{
+const authorsArray = blogs.map(blog => blog.author)
+console.log('authorsArray :>> ', authorsArray)
+
+const authorsCount = {}
+authorsArray.forEach(author => {
+  authorsCount[author] = (authorsCount[author] || 0) + 1
+});
+console.log('authorsCount :>> ', authorsCount);
+
+const arrayValuesCounter = Object.values(authorsCount)
+const arrayKeysCounter = Object.keys(authorsCount)
+const indexAuthor = arrayValuesCounter.indexOf(Math.max(...arrayValuesCounter))
+
+const authorMostBlogsPost = {
+  author:arrayKeysCounter[indexAuthor],
+  blogs: arrayValuesCounter[indexAuthor]
 }
-  }
+return authorMostBlogsPost
+
+}
+  };
 
 module.exports = {
   dummy,

@@ -148,7 +148,12 @@ describe('author with the most posted blogs', () => {
     })
 
     test('when the list of blogs is greater than one, return the author with most posted blogs',() => { 
-
+      const result = listHelper.mostBlogs(blogsList)
+      const current = {
+        author:"Robert C. Martin" ,
+        blogs:3
+      }
+      expect(result).toEqual(current)
      })
 
  });
