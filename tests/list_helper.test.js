@@ -125,7 +125,9 @@ describe("most liked blog", () => {
 describe('author with the most posted blogs', () => { 
 
   test('when array is empty return zero', () => { 
-
+    const blogs = []
+    const result = listHelper.mostBlogs(blogs)
+    expect(result).toEqual(0)
    })
 
    test('when in the array there is only one blog return information of that blog', () => { 

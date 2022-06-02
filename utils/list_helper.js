@@ -44,8 +44,15 @@ const favouriteBlog = (blogs) => {
  };
 
  const mostBlogs = (blogs) => { 
-
-
+  if(blogs.length===0){
+    return 0
+}
+if(blogs.length===1){
+  authorMostBlogsInfo = {
+  author : blogs[0].author,
+  blogs: 1
+}
+}
   }
 
 module.exports = {
