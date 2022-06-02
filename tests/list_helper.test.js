@@ -157,3 +157,30 @@ describe('author with the most posted blogs', () => {
      })
 
  });
+
+ describe('author with most Likes', () => { 
+
+test('when list of blogs is empty return zero',() => { 
+  const blogs = []
+  const result = listHelper.mostLikes(blogs)
+  expect(result).toEqual(0)
+ })
+
+ test('when there is only one blog in the list return that blog info',() => { 
+  const blogs = [{
+    _id: "5a422a851b54a676234d17f7",
+    title: "React patterns",
+    author: "Michael Chan",
+    url: "https://reactpatterns.com/",
+    likes: 7,
+    __v: 0,
+  }]
+  const result = listHelper.mostLikes(blogs)
+  const current = {
+    author: "Michael Chan",
+    likes: 7
+  }
+  expect(result).toEqual(current)
+  })
+
+  });

@@ -76,9 +76,25 @@ return authorMostBlogsPost
 }
   };
 
+const mostLikes = (blogs) => { 
+  if(blogs.length===0){
+    return 0
+}
+if(blogs.length===1){
+  authorMostLikes = {
+  author : blogs[0].author,
+  likes: blogs[0].likes
+}
+return authorMostLikes
+
+ } else {
+
+ }
+}
 module.exports = {
   dummy,
   totalLikes,
   favouriteBlog,
-  mostBlogs
+  mostBlogs,
+  mostLikes
 };
