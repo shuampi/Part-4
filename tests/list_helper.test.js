@@ -183,4 +183,13 @@ test('when list of blogs is empty return zero',() => {
   expect(result).toEqual(current)
   })
 
+  test('when the blog list is greater thant one return an objec with the autor and likes information',() => { 
+    const result = listHelper.mostLikes(blogsList)
+    const current = {
+      author:"Edsger W. Dijkstra",
+      likes:17
+    }
+    expect(result).toEqual(current)
+   })
+
   });

@@ -88,9 +88,21 @@ if(blogs.length===1){
 return authorMostLikes
 
  } else {
+const authorsLikes = {}
+blogs.forEach(blog => authorsLikes[blog.author] = (authorsLikes[blog.author] || 0 ) + blog.likes )
+ console.log('authorsLikes :>> ', authorsLikes);
+ const arrayValuesLikes = Object.values(authorsLikes)
+ const arrayKeysLikes = Object.keys(authorsLikes)
+ const indexAuthor = arrayValuesLikes.indexOf(Math.max(...arrayValuesLikes))
 
+ const authorMostLikes = {
+   author: arrayKeysLikes[indexAuthor],
+   likes: arrayValuesLikes[indexAuthor]
  }
+ return authorMostLikes
+
 }
+};
 module.exports = {
   dummy,
   totalLikes,
