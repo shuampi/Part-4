@@ -121,3 +121,19 @@ describe("most liked blog", () => {
 
    })
 });
+//helper functions and unit tests step 4 (4.6)
+describe('author with the most posted blogs', () => { 
+
+  test('when array is empty return zero', () => { 
+
+   })
+
+   test('when in the array there is only one blog return information of that blog', () => { 
+
+    })
+
+    test('when the list of blogs is greater than one, return the author with most posted blogs',() => { 
+
+     })
+
+ });
