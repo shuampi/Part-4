@@ -55,13 +55,13 @@ if(blogs.length===1){
 return authorMostBlogsInfo
 } else{
 const authorsArray = blogs.map(blog => blog.author)
-console.log('authorsArray :>> ', authorsArray)
+//console.log('authorsArray :>> ', authorsArray)
 
 const authorsCount = {}
 authorsArray.forEach(author => {
   authorsCount[author] = (authorsCount[author] || 0) + 1
 });
-console.log('authorsCount :>> ', authorsCount);
+//console.log('authorsCount :>> ', authorsCount);
 
 const arrayValuesCounter = Object.values(authorsCount)
 const arrayKeysCounter = Object.keys(authorsCount)
@@ -90,7 +90,7 @@ return authorMostLikes
  } else {
 const authorsLikes = {}
 blogs.forEach(blog => authorsLikes[blog.author] = (authorsLikes[blog.author] || 0 ) + blog.likes )
- console.log('authorsLikes :>> ', authorsLikes);
+ //console.log('authorsLikes :>> ', authorsLikes);
  const arrayValuesLikes = Object.values(authorsLikes)
  const arrayKeysLikes = Object.keys(authorsLikes)
  const indexAuthor = arrayValuesLikes.indexOf(Math.max(...arrayValuesLikes))

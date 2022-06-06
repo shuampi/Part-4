@@ -18,7 +18,7 @@
   "scripts": {
     "start": "cross-env NODE_ENV=production node index.js",
     "dev": "cross-env NODE_ENV=development nodemon index.j",
-    "test": "cross-env NODE_ENV=test jest --verbose runInBand"
+    "test": "cross-env NODE_ENV=test jest --verbose --runInBand --forceExit "
   },
   "jest": {
     "testEnvironment": "node"
