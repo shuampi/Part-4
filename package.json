@@ -3,19 +3,22 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
-    "mongoose": "^6.3.4"
+    "mongoose": "^6.3.4",
+    "save-dev": "^0.0.1-security"
   },
   "name": "blog-list",
   "version": "1.0.0",
   "main": "index.js",
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "jest": "^28.1.0",
-    "nodemon": "^2.0.16"
+    "nodemon": "^2.0.16",
+    "supertest": "^6.2.3"
   },
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.j",
-    "test": "jest --verbose"
+    "start": "cross-env NODE_ENV=production node index.js",
+    "dev": "cross-env NODE_ENV=development nodemon index.j",
+    "test": "cross-env NODE_ENV=test jest --verbose runInBand"
   },
   "jest": {
     "testEnvironment": "node"
