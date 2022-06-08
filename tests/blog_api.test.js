@@ -64,6 +64,13 @@ const authors = response.body.map(blog => blog.author)
 expect(authors).toContain('Pepito')
  })
 
+ test('there is an unique identify property for each blog call id',async () => { 
+   const response = await api.get('/api/blogs')
+   response.body.forEach(blog => expect(blog.id).toBeDefined())
+   //const ids = response.body.map(blog => blog.id)
+  // expect(ids).toBeDefined()
+  })
+
 afterAll(() => {
     mongoose.connection.close()
   })
